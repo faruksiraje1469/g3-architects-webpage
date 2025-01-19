@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .work-sans-font {
   font-family: "Work Sans", serif;
@@ -64,6 +68,7 @@ main>section{
 .navbar{
     justify-content: space-around;
     align-items: center;
+    padding-top:50px ;
 }
 .brand{
     font-weight: 700;
@@ -82,6 +87,10 @@ main>section{
     max-width: 1440px;
     margin: 0 auto;  
 }
+.banner{
+    flex-direction: column;
+}
+
 
 
 /* banner style */
@@ -89,15 +98,18 @@ main>section{
     max-width: 850px;
     margin: 0 auto;
     text-align: center; 
+    /* border: 1px solid black; */
     
 }
 .banner-title{
     font-weight: 700;
     font-size: 4rem;
+    margin-top: 150px;
 }
 .banner-img{
-    height: 100%;
     width: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
    
 }
 
@@ -170,17 +182,26 @@ main>section{
 /* feature style */
 .features{
     gap: 140px;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+}
+.feature-description{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #feature-section-title{
     border-left: 5px solid #FF900E;
     padding-left: 20px;
 }
 .feature-card{
-    padding: 30px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 30px 0 rgba(0, 0,0, 0.06);
     margin-bottom: 20px;
     margin-bottom: 20px;
+ 
 
 }
  .feature-title{
@@ -209,23 +230,34 @@ main>section{
 #footer{
     height: 40px;
     width: 75%;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 500;
     margin-top: 100px;
     margin-left: 200px;
+
 }
+
+    
+
+#footer h5{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}   
+   
 
 
 
 
 
 @media screen and (max-width: 576px) {
-     .navbar
-     .nav-links
+     .navbar,
+     .nav-links,
      .teams
-     .features{
+     {
         flex-direction: column;
+    }
+    .features , .our-features {
+        flex-direction: column;
+        
     }
     .team-img-container,
     .fact-container,
@@ -237,12 +269,13 @@ main>section{
     .sponsor-companies
     {
         justify-content: center;
+        align-items: center;
         gap: 24px;
     }
     .our-features{
         margin-left: 20px;
     }
-    .#experience-badge{
+    #experience-badge{
         margin-top: 20px;
         margin-left: 20px;
     }
